@@ -9,5 +9,5 @@ WORKDIR /var/www/html
 RUN unzip roxy.zip
 RUN cp -rvf roxy/* .
 RUN rm -rf roxy roxy.zip
-CMD ["/bin/sh", "-D", "FOREGROUND"]
+CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
 EXPOSE 80
